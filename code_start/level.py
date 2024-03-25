@@ -33,7 +33,7 @@ class Level():
                     move_dir = 'y'
                     start_pos = (obj.x + obj.width / 2, obj.y)
                     end_pos = (obj.x + obj.width / 2, obj.y + obj.height)
-                speed = 
+                speed = obj.properties['speed']         
         
     def run(self, dt):
         self.all_sprites.update(dt)
