@@ -1,5 +1,5 @@
 from settings import *
-from sprites import Sprite
+from sprites import Sprite, MovingSprite
 from player import Player
 
 class Level():
@@ -33,7 +33,8 @@ class Level():
                     move_dir = 'y'
                     start_pos = (obj.x + obj.width / 2, obj.y)
                     end_pos = (obj.x + obj.width / 2, obj.y + obj.height)
-                speed = obj.properties['speed']         
+                speed = obj.properties['speed']   
+                MovingSprite(self.all_sprites, start_pos, end_pos, move_dir, speed)      
         
     def run(self, dt):
         self.all_sprites.update(dt)
