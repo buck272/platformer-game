@@ -22,9 +22,9 @@ class AnimatedSprite(Sprite):
     def update(self, dt):
         self.animate(dt)
         
-class MovingSprite(Sprite):
-    def __init__(self, groups, start_pos, end_pos, move_dir, speed):
-        surf = pygame.Surface((200, 50))
+class MovingSprite(AnimatedSprite):
+    def __init__(self, frames, groups, start_pos, end_pos, move_dir, speed):
+        
         super().__init__(start_pos, surf, groups)
         self.image.fill('white')
         if move_dir == 'x':
