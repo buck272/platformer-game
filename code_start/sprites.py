@@ -24,9 +24,8 @@ class AnimatedSprite(Sprite):
         
 class MovingSprite(AnimatedSprite):
     def __init__(self, frames, groups, start_pos, end_pos, move_dir, speed):
+        super().__init__(start_pos, frames, groups)
         
-        super().__init__(start_pos, surf, groups)
-        self.image.fill('white')
         if move_dir == 'x':
             self.rect.midleft = start_pos
         else:
