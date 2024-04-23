@@ -62,3 +62,4 @@ class MovingSprite(AnimatedSprite):
         self.old_rect = self.rect.copy()
         self.rect.topleft += self.direction * self.speed * dt
         self.check_border()
+        self.animate(dt)
